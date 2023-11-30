@@ -176,5 +176,31 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
- )           </div>
+          </div>
+           <div className="untree_co-section">
+                <div className="container">
+                    <div className="row mb-5 justify-content-center">
+                        <div className="col-lg-6 text-center">
+                            <h2 className="section-title text-center mb-3">Our Services</h2>
+                            <p>
+                                Far far away, behind the word mountains, far from the countries
+                                Vokalia and Consonantia, there live the blind texts. Separated
+                                they live in Bookmarksgrove right at the coast of the Semantics, a
+                                large language ocean.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="row align-items-stretch">
+                        <div className="col-lg-4 order-lg-1">
+                            <div className="h-100">
+                                <div className="frame h-100">
+                                    <div
+                                        className="feature-img-bg h-100"
+                                        style={{ backgroundImage: "url('images/hero-slider-1.jpg')" }}
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+ )
+
 }
