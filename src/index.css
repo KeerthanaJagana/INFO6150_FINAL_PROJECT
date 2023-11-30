@@ -21,3 +21,41 @@ body {
     -o-transition: 0.3s all ease;
     transition: 0.3s all ease;
   }
+  
+  body.offcanvas-menu:before {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  
+  
+  .btn {
+    font-size: 14px;
+  }
+  
+  .btn:active,
+  .btn:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  
+  
+  
+  /* Add this CSS to your stylesheets */
+  
+  
+  
+  .dropdown-menu {
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    background-color: #fff;
+  }
+  
+  .dropdown-item {
+    color: #333;
+    padding: 0.75rem;
+    transition: background-color 0.3s;
+    border-bottom: 1px solid #e5e5e5;
+  }
