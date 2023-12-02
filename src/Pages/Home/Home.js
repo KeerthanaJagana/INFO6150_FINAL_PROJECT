@@ -226,6 +226,35 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
+                        <div
+                            className="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3"
+                        >
+                            <div className="feature-1 d-md-flex">
+                                <div className="align-self-center">
+                                    <span className="flaticon-mail display-4 text-primary"></span>
+                                    <h3>Easy to Connect</h3>
+                                    <p className="mb-0">
+                                        Even the all-powerful Pointing has no control about the blind
+                                        texts.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="feature-1 d-md-flex">
+                                <div className="align-self-center">
+                                    <span className="flaticon-phone-call display-4 text-primary"></span>
+                                    <h3>24/7 Support</h3>
+                                    <p className="mb-0">
+                                        Even the all-powerful Pointing has no control about the blind
+                                        texts.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
  )
 
 }
