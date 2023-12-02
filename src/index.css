@@ -59,3 +59,29 @@ body {
     transition: background-color 0.3s;
     border-bottom: 1px solid #e5e5e5;
   }
+  .dropdown-item:hover {
+    background-color: #f8f9fa;
+    /* Add a subtle background color on hover */
+    color: #007bff;
+    /* Change text color on hover */
+  }
+  
+  .text-white-opacity {
+    opacity: 0.7;
+  }
+  
+  .form-control,
+  .custom-select {
+    border: 2px solid #e9ecef;
+    font-size: 16px;
+    height: 45px;
+  }
+  
+  .form-control:active,
+  .form-control:focus,
+  .custom-select:active,
+  .custom-select:focus {
+    border-color: #1a374d;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
