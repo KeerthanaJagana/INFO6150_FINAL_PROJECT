@@ -459,7 +459,51 @@ export default function Home() {
                                     We accept payments via credit cards, PayPal, and bank transfers. You can choose the option that suits you best during the booking process.
                                 </div>
                             </div>
-                        </div>        
+                        </div>  
+                        <div className="accordion-item">
+                            <h2 className="accordion-header" id="faqHeading2">
+                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                    Can I cancel my trip and get a refund?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse2" className="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                                <div className="accordion-body">
+                                    Yes, you can cancel your trip, but the refund policy depends on the specific trip and when you cancel. Please refer to our cancellation policy for more details.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="accordion-item">
+                            <h2 className="accordion-header" id="faqHeading3">
+                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                    Is travel insurance included in the trip cost?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse3" className="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                                <div className="accordion-body">
+                                    Travel insurance is not included in the trip cost. We recommend purchasing travel insurance to protect yourself in case of unexpected events during your journey.
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div className="accordion-item">
+                            <h2 className="accordion-header" id="faqHeading4">
+                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                                    How can I contact customer support for assistance?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse4" className="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+                                <div className="accordion-body">
+                                    You can contact our customer support team by calling our toll-free number, sending an email to support@example.com, or using our online chat service available on our website.
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>      
 
  )
 
