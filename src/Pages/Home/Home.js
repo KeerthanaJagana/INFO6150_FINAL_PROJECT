@@ -420,6 +420,47 @@ export default function Home() {
                 </div>
             </div>
 
+            <div className="py-5 cta-section">
+                <div className="container">
+                    <div className="row text-center">
+                        <div className="col-md-12">
+                            <h2 className="mb-2 text-white">
+                                Lets you Explore the Best. Contact Us Now
+                            </h2>
+                            <p className="mb-4 lead text-white text-white-opacity">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Excepturi, fugit?
+                            </p>
+                            <p className="mb-0">
+                                <a
+                                    href="booking.html"
+                                    className="btn btn-outline-white text-white btn-md font-weight-bold"
+                                >Get in touch</a
+                                >
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="container my-5">
+                <h2 className="text-center">Frequently Asked Questions</h2>
+                <div id="faqAccordion">
+                    <div className="accordion">
+
+                        <div className="accordion-item">
+                            <h2 className="accordion-header" id="faqHeading1">
+                                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                                    What are the payment options for booking a trip?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse1" className="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                                <div className="accordion-body">
+                                    We accept payments via credit cards, PayPal, and bank transfers. You can choose the option that suits you best during the booking process.
+                                </div>
+                            </div>
+                        </div>        
+
  )
 
 }
