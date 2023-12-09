@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CounterSection from '../../Components/Counter'
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import axios from '../../axios';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
     const navigate = useNavigate();
-
+    const [reviews, setReviews] = useState([]);
+    useEffect(() => {
+        axios.get('/latest-reviews')
+            .then(res => {
+                setReviews(res.data);
+            })
+            .catch(err => {
+                console.error('Error fetching reviews:', err);
+            });
+    }, []);
     const handleSearch = (e) => {
         e.preventDefault();
 
@@ -65,7 +77,7 @@ export default function Home() {
                                                     <input
                                                         type="text"
                                                         className="form-control"
-                                                        placeholder="# of People"
+                                                        placeholder="# of Days"
                                                     />
                                                 </div>
                                             </div>
@@ -176,8 +188,8 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-          </div>
-           <div className="untree_co-section">
+            </div>
+            <div className="untree_co-section">
                 <div className="container">
                     <div className="row mb-5 justify-content-center">
                         <div className="col-lg-6 text-center">
@@ -200,8 +212,9 @@ export default function Home() {
                                     ></div>
                                 </div>
                             </div>
-                        </div>
-              <div
+                        </div>
+
+                        <div
                             className="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1"
                         >
                             <div className="feature-1 d-md-flex">
@@ -226,6 +239,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
+
                         <div
                             className="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3"
                         >
@@ -254,6 +268,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+
             <div>
                 <CounterSection></CounterSection>
             </div>
@@ -428,15 +443,16 @@ export default function Home() {
                                 Lets you Explore the Best. Contact Us Now
                             </h2>
                             <p className="mb-4 lead text-white text-white-opacity">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Excepturi, fugit?
+                            "Embark on unforgettable journeys with our travel website, where every destination is a new adventure waiting to be explored."
                             </p>
                             <p className="mb-0">
-                                <a
-                                    href="booking.html"
+                                {/* <a
+                                    href="/"
                                     className="btn btn-outline-white text-white btn-md font-weight-bold"
-                                >Get in touch</a
-                                >
+                                >Get in touch</a> */}
+                                 <Link className="nav-link" to="/About-us">
+                                        <button className='btn btn-primary'>Get in Touch</button>
+                                    </Link>
                             </p>
                         </div>
                     </div>
@@ -459,7 +475,9 @@ export default function Home() {
                                     We accept payments via credit cards, PayPal, and bank transfers. You can choose the option that suits you best during the booking process.
                                 </div>
                             </div>
-                        </div>  
+                        </div>
+
+
                         <div className="accordion-item">
                             <h2 className="accordion-header" id="faqHeading2">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
@@ -503,9 +521,25 @@ export default function Home() {
 
                     </div>
                 </div>
-            </div>      
-
-  <div className="site-footer">
+            </div>
+            <div className="container mt-4">
+            <h2 className="mb-3">Latest Reviews</h2>
+            <div className="row">
+                {reviews.map((review, index) => (
+                    <div key={index} className="col-md-4 mb-3">
+                        <div className="card">
+                            <div className="card-body">
+                                <h5 className="card-title">{review.trip.name}</h5>
+                                <p className="card-text">{review.reviewText}</p>
+                                {/* Display other trip details as needed */}
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+            {reviews.length === 0 && <p>No reviews available.</p>}
+        </div>
+            <div className="site-footer">
                 <div className="inner first">
                     <div className="container">
                         <div className="row">
@@ -571,8 +605,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-        </div>
-
- )
-
+        </div>
+    )
 }
